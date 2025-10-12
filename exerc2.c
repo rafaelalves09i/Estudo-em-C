@@ -7,8 +7,9 @@ int main(){
     printf("\n"); /*separar a do b*/
 
 
-    printf("Treinamento em");
+    printf("Treinamento em");/*b)*/
     printf("Programacao.\n");
     printf("Liguagem C.\n");
+    
     return 0;
 }
