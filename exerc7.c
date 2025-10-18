@@ -1,3 +1,4 @@
+/*Exercício 22 - Sabendo que o latão  é obtido fundindo sete partes de cobre com três partes de zinco, faça um programa que solicite quantos quilos de latão se que produzir e imprime quantos quilos de cobre e zinco são necessários.*/
 #include <stdio.h>
 
 int main(){
