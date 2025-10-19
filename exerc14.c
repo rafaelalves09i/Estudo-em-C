@@ -1,20 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    int a, b, c, soma = 0;
+    int a, b, c, soma = 0, maior, menor;
     
     printf("Digite os valores de a, b e c: \n");
     scanf("%d%d%d", &a, &b, &c);
 
+    int i;
 
 
-    while(a == 1){
+    while(a <= 1){
         printf("Digite um valor de a > 1");
         scanf("%d", &a);
     }
-    
-    int i;
-    for(i = b + 1; i < c; i++){
+
+    if(b > c){
+        maior = b;
+        menor = c;
+    }else{
+        maior = c;
+        menor = b;
+    }
+
+    for(i = menor + 1; i < maior; i++){
         if(i % a == 0){
             soma += i;
         }
