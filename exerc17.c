@@ -1,3 +1,7 @@
+/*Exercício 39. A famosa conjetura de Goldbach diz que todo inteiro par maior que 2 é a soma de dois números primos. 
+Testes extensivos foram feitos sem contudo ser encontrado um contraexemplo. 
+Escreva  um programa que mostre que a afirmação é verdadeira para todo número par entre 700 e 1100. O programa deve imprimir cada número e os primos correspondentes. 
+Use a função do exercício anterior.*/
 #include <stdio.h>
 #include <math.h>
 #define MAX 1100
