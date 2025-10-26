@@ -10,7 +10,7 @@ int main(){
 
     Distancia = pow(pow(x2 - x1, 2) + pow(y2 -y1, 2), 0.5);
 
-    printf("%.4f", Distancia);
+    printf("%.4f\n", Distancia);
 
     return 0;
 }
