@@ -11,6 +11,6 @@ int main(){
         j += 2;
         k *= 2;
     }
-    printf("%.2f", S);
+    printf("%.2f\n", S);
     return 0;
 }
