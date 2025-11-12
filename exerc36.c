@@ -27,6 +27,7 @@ Number* Operation_Mult(Number* left, Number* right);
 void Number_Print(Number* number);
 Number* Number_Simplify(Number* number);
 
+
 Expression* Expression_Read();
 Number* Number_Read();
 Operation* Operation_Read();
@@ -39,23 +40,20 @@ int main(){
         Expression* expression = Expression_Read();
         Number* number = Expression_Solve(expression);
         Number* numberSimplified = Number_Simplify(number);
-        
         Number_Print(number);
         printf(" = ");
         Number_Print(numberSimplified);
         printf("\n");
-        
-        free(number);
-        free(numberSimplified);
-        free(expression->left);
-        free(expression->right);
-        free(expression->operation);
-        free(expression);
     }
     return 0;
 }
 
+
 void Number_Print(Number* number){
+    if(number->d < 0){
+        number->n = -number->n;
+        number->d = -number->d;
+    }
     printf("%d/%d", number->n, number->d); 
 }
 
@@ -77,7 +75,8 @@ Number* Number_Simplify(Number* number){
 Expression* Expression_Read(){
     Expression* expression = (Expression*) malloc(sizeof(Expression));
     expression->left = Number_Read();
-    expression->operation = Operation_Read();
+    Operation* operation = Operation_Read();
+    expression->operation = operation;
     expression->right = Number_Read();
     return expression;
 }
@@ -101,7 +100,9 @@ Operation* Operation_Read(){
         operation->func = Operation_Mult;
     }else if(code == '/'){
         operation->func = Operation_Div;
-    }
+    }else{
+        //ERROR!!
+    }   
     return operation;
 }
 
