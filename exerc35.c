@@ -34,10 +34,8 @@ int main(){
             break;
 
             default:
-                printf("\n");
+                printf("\n O numero é válido");
                 break;
-
-
 
         }
 
